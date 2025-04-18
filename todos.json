@@ -1,5 +1,27 @@
 [
-    { "id": 1, "title": "Learn Node.js", "completed": false },
-    { "id": 2, "title": "Build an API", "completed": true }
+  {
+    "id": 1,
+    "title": "Learn Node.js",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "title": "Build an API",
+    "completed": true
+  },
+  {
+    "id": 3,
+    "title": "Server.js",
+    "completed": true
+  },
+  {
+    "id": 4,
+    "title": "Video Demo",
+    "completed": false
+  },
+  {
+    "id": 6,
+    "title": "Create Video Demo",
+    "completed": false
+  }
 ]
-  

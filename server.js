@@ -9,7 +9,6 @@ const logFile = path.join(__dirname, 'logs.txt');
 
 const logger = new EventEmitter();
 
-// Logging functionality
 logger.on('log', (message) => {
   const timestamp = new Date().toISOString();
   fs.appendFile(logFile, `${timestamp} - ${message}\n`, (err) => {
@@ -17,7 +16,6 @@ logger.on('log', (message) => {
   });
 });
 
-// Helper functions
 const readTodos = () => {
   try {
     const data = fs.readFileSync(todosFile, 'utf-8');
@@ -36,13 +34,11 @@ const sendResponse = (res, statusCode, data) => {
   res.end(JSON.stringify(data));
 };
 
-// Create HTTP Server
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const method = req.method;
   const id = url.pathname.split('/')[2];
 
-  // Log all requests
   logger.emit('log', `${method} ${url.pathname}`);
 
   if (url.pathname === '/todos' && method === 'GET') {
@@ -78,7 +74,7 @@ const server = http.createServer((req, res) => {
 
         todos.push(newTodo);
         writeTodos(todos);
-        sendResponse(res, 201, newTodo);
+        sendResponse(res, 200, newTodo);
       } catch (err) {
         sendResponse(res, 400, { message: 'Invalid JSON' });
       }

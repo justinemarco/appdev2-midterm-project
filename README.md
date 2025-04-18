@@ -2,6 +2,7 @@
 
 ## Submitted by: 
 **Justine Jynne Patrice A. Marco**
+
 BSIS-3 Student at La Verdad Christian College - Apalit
 
 ## Project Summary
@@ -19,10 +20,11 @@ The **Project Structure** of this simple API is as follows:
 
 ## How to Run
 1. Clone this repository to your local machine
+`https://github.com/justinemarco/appdev2-midterm-project.git`
 2. Make sure you have Node.js installed
 3. Start the Server by typing "node server.js" in your terminal
 4. Access the API at "http://localhost:3001/todos"
 5. Use a tool like Postman or Thunder Client to test the API endpoints
 
 ## Video Demonstration
-
+`https://drive.google.com/file/d/1YrKKrVEWKp_0cmKWlIGTvy-KLRf8mTnx/view?usp=sharing`
